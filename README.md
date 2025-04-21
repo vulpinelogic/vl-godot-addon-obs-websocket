@@ -100,10 +100,23 @@ value provided is `uuid://` prefixed. For example,
 `set_resource_request_field("scene", "uuid://scene-uuid-value")` will add the
 key `sceneUuid` and the value `uuid://scene-uuid-value` to the request.
 
+Many of the requests offered by OBS are not implemented in this addon, but adding support for requests is trivial in most cases. Feel free to open a pull request with new request implementations that include the request itself under the `addons/vulpinelogic_obs_websocket/websocket/requests` folder and include a convenience method within the `VulpineLogicOBSWebSocket` class itself. An issue can be opened requesting the addition instead, but the maintainers may be slower to respond to issues than to PRs.
+
+# UUIDs
+
+Many objects in OBS are identified both by name and UUID. One of the few higher-level features provided by this addon is to automatically add a `uuid://` prefix to response Strings that contain an OBS object's UUID. The complement to this an automatic stripping of the prefix in requests. This is done to help developers avoid passing a UUID where a name was expected, or vice versa.
+
+To get an unprefixed UUID String, call the static method `VulpineLogicOBSWebSocketRequest.uuid_to_string`, passing the UUID-prefixed String retrieved from a response or event. It is safe to call this method on already unprefixed Strings, in which case the method just returns the String that was passed in.
+
+### Auto-connect/-reconnect
+
+As soon as a `VulpineLogicOBSWebSocket` node becomes ready in the scene tree, it will begin attempting to connect to OBS. This connection will silently fail and retry until a valid password is provided. If the default reconnect delay of 1 second causes issues, the `reconnect_delay` property can be set to increase this delay.
+
+There is no way to specifically disable auto-connect, but setting the node's process mode to `PROCESS_MODE_DISABLED` will pause the reconnect timer, effectively disabling auto-connect.
+
 ## License
 
 Copyright © 2025 VulpineLogic and contributors
 
 Unless otherwise specified, files in this repository are licensed under the
 MIT license. See [LICENSE.md](LICENSE.md) for more information.
-
