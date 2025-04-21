@@ -104,7 +104,7 @@ func get_type() -> StringName:
 	return &""
 
 
-func setResourceRequestField(name: String, resource: String) -> void:
+func set_resource_request_field(name: String, resource: String) -> void:
 	if is_uuid(resource):
 		request["%sUuid" % name] = uuid_to_string(resource)
 	else:

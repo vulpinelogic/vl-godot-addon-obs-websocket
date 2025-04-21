@@ -6,7 +6,7 @@ extends VulpineLogicOBSWebSocketRequest
 func _init(
 		scene: String
 ) -> void:
-	setResourceRequestField("scene", scene)
+	set_resource_request_field("scene", scene)
 
 
 func get_type() -> StringName:

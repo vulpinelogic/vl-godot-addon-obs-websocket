@@ -10,7 +10,7 @@ func _init(
 	input_settings: Dictionary = {},
 	scene_item_enabled: bool = true
 ):
-	setResourceRequestField("scene", scene)
+	set_resource_request_field("scene", scene)
 	request["inputName"] = input_name
 	request["inputKind"] = input_kind
 	request["sceneItemEnabled"] = scene_item_enabled

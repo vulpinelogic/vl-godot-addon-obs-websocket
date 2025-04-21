@@ -7,7 +7,7 @@ func _init(
 		input: String,
 		property_name: String
 ) -> void:
-	setResourceRequestField("input", input)
+	set_resource_request_field("input", input)
 	request["propertyName"] = property_name
 
 

@@ -8,8 +8,8 @@ func _init(
 	source: String,
 	scene_item_enabled: bool = true
 ):
-	setResourceRequestField("scene", scene)
-	setResourceRequestField("source", source)
+	set_resource_request_field("scene", scene)
+	set_resource_request_field("source", source)
 	request["sceneItemEnabled"] = scene_item_enabled
 
 

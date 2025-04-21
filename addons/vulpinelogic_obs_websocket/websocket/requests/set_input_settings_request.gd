@@ -8,7 +8,7 @@ func _init(
 		input_settings: Dictionary,
 		overlay: bool = true
 ) -> void:
-	setResourceRequestField("input", input)
+	set_resource_request_field("input", input)
 	request["inputSettings"] = input_settings
 	request["overlay"] = overlay
 	

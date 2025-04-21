@@ -8,7 +8,7 @@ func _init(
 		source_name: String,
 		search_offset: int = -1
 ) -> void:
-	setResourceRequestField("scene", scene)
+	set_resource_request_field("scene", scene)
 	
 	if is_uuid(source_name):
 		push_error("Expected a resource name but received uuid %s" % source_name)

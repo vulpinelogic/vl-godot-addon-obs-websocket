@@ -8,7 +8,7 @@ func _init(
 		scene_item_id: int,
 		scene_item_locked: bool = true 
 ) -> void:
-	setResourceRequestField("scene", scene)
+	set_resource_request_field("scene", scene)
 	request["sceneItemId"] = scene_item_id
 	request["sceneItemLocked"] = scene_item_locked
 	

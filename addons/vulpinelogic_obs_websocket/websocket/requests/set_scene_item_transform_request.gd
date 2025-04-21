@@ -8,7 +8,7 @@ func _init(
 		scene_item_id: int,
 		scene_item_transform: Dictionary
 ) -> void:
-	setResourceRequestField("scene", scene)
+	set_resource_request_field("scene", scene)
 	request["sceneItemId"] = scene_item_id
 	request["sceneItemTransform"] = camel_case_dictionary(scene_item_transform)
 	
