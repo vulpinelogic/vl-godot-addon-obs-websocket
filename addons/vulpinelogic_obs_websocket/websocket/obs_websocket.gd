@@ -3,7 +3,7 @@ class_name VulpineLogicOBSWebSocket
 
 extends Node
 
-signal closed
+signal closed(close_code: int)
 signal connected
 signal connection_failed(error: int)
 signal current_profile_change_started(profile_name: String)
@@ -77,6 +77,24 @@ const DEFAULT_HOST = "ws://127.0.0.1:4455"
 @export_range(1, 60, 1.0, "hide_slider", "or_greater", "suffix:seconds")
 var reconnect_delay: int = 1
 
+@export_flags(
+		"General:1",
+		"Config:2",
+		"Scenes:4",
+		"Inputs:8",
+		"Transitions:16",
+		"Filters:32",
+		"Outputs:64",
+		"Scene Items:128",
+		"Media Inputs:256",
+		"Vendors:512",
+		"UI:1024",
+		"Input Volume Meters:65536",
+		"Input Active State Changed:131072",
+		"Input Show State Changed:262144",
+		"Scene Item Transform Changed:524288"
+)
+var event_subscriptions: int = EventSubscription.ALL
 
 var is_identified: bool:
 	get():
@@ -873,7 +891,7 @@ func _handle_hello(payload: Dictionary) -> void:
 		return
 
 	var authentication = Marshalls.raw_to_base64(hc.finish())
-	_identify(EventSubscription.ALL, authentication)
+	_identify(event_subscriptions, authentication)
 
 
 func _handle_identified(event: Dictionary) -> void:
