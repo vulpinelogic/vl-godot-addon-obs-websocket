@@ -66,8 +66,8 @@ Implemented requests are located in
 `addons/vulpinelogic_obs_websocket/websocket/requests` and are expected to
 inherit from the `VulpineLogicOBSWebsocketRequest` class. If a request expects
 parameters, these should be set via an optional `_init` method. In order to make
-alterations to the response before it is returned to the caller, implement
-`_transform_response(raw_response: Dictionary) -> Variant`.
+alterations to the response before it is returned to the caller, provide a
+`_transform_response` method.
 
 Example:
 
