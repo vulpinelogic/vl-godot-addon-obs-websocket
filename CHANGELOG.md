@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## 0.1.3 - 2025-04-23
+
+- Ignore .DS_Store files
+
 ## 0.1.2 - 2025-04-23
 
 - Support event selection in inspector
@@ -20,5 +24,5 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Initial versioned release.
 
-[Unreleased]: https://github.com/vulpinelogic/vl-godot-addon-obs-websocket/compare/v0.1.2...HEAD
+[Unreleased]: https://github.com/vulpinelogic/vl-godot-addon-obs-websocket/compare/v0.1.3...HEAD
 
