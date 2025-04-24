@@ -7,6 +7,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## 0.1.2 - 2025-04-23
+
+- Support event selection in inspector
+- Add missing close_code arg to closed signal signature
+
 ## 0.1.1 - 2025-04-20
 
 - Fix casing on set_resource_request_field method name
@@ -15,5 +20,5 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Initial versioned release.
 
-[Unreleased]: https://github.com/vulpinelogic/vl-godot-addon-obs-websocket/compare/v0.1.1...HEAD
+[Unreleased]: https://github.com/vulpinelogic/vl-godot-addon-obs-websocket/compare/v0.1.2...HEAD
 
