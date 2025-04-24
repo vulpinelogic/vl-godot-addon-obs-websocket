@@ -2,8 +2,7 @@
 
 Connect to OBS via WebSocket, make requests, and receive events.
 
-This repository only contains the add-on. A demo will be provided at some time
-in the future.
+This repository only contains the add-on. See [vl-godot-addon-demos](https://github.com/vulpinelogic/vl-godot-addon-demos) for demos.
 
 ## Features
 
